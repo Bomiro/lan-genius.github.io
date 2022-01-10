@@ -61286,7 +61286,7 @@ Re(){var s=this
 s.aK(new A.a6K(s))
 A.Rf(new A.Xd("zh",A.a(["android","ios","windows","darwin","linux"],t.s)),new A.a6L(s),new A.a6M(s),new A.a6N(s))}}
 A.a6P.prototype={
-$2(a,b){var s=null,r=this.a,q=r.f[b],p=A.rF("/image/"+q+".png",s,s,s)
+$2(a,b){var s=null,r=this.a,q=r.f[b],p=A.rF("https://langenius.gitee.io/image/"+q+".png",s,s,s)
 q=A.cN(A.kC(q,"darwin","Mac"),s,s,s,s)
 return A.ahk(p,new A.a6O(r,b),A.cN("v"+r.e[b].a,s,s,s,s),q)},
 $S:377}
