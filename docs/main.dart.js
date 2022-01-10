@@ -18420,9 +18420,9 @@ abW:function abW(){},
 Qp(a,b,c,d,e,f){return A.auZ(a,b,c,d,e,f)},
 auZ(a3,a4,a5,a6,a7,a8){var s=0,r=A.ai(t.z),q=1,p,o=[],n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2
 var $async$Qp=A.ad(function(b0,b1){if(b0===1){p=b1
-s=q}while(true)switch(s){case 0:a1=A.ai1(a3,A.mb("https://120.77.202.220:9000"+a4,0,null))
+s=q}while(true)switch(s){case 0:a1=A.ai1(a3,A.mb("https://api.lan-genius.com:9000"+a4,0,null))
 q=3
-n=A.ai1(a3,A.mb("https://120.77.202.220:9000"+a4,0,null))
+n=A.ai1(a3,A.mb("https://api.lan-genius.com:9000"+a4,0,null))
 n.r.q(0,"Content-Type","application/json; charset=utf-8")
 i=n
 h=B.aR.I5(a5,null)
