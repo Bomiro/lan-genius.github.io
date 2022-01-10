@@ -18475,13 +18475,13 @@ this.b=b},
 Rh(a,b,c,d){var s=0,r=A.ah(t.z)
 var $async$Rh=A.aa(function(e,f){if(e===1)return A.ad(f,r)
 while(true)switch(s){case 0:s=2
-return A.aF(A.yX("POST","/api-v5/public/prices",a,new A.Ri(d),c,b),$async$Rh)
+return A.aF(A.yX("GET","/api-v5/public/prices",a,new A.Ri(d),c,b),$async$Rh)
 case 2:return A.ae(null,r)}})
 return A.af($async$Rh,r)},
 Rf(a,b,c,d){var s=0,r=A.ah(t.z)
 var $async$Rf=A.aa(function(e,f){if(e===1)return A.ad(f,r)
 while(true)switch(s){case 0:s=2
-return A.aF(A.yX("POST","/api-v5/public/latest-release",a,new A.Rg(d),c,b),$async$Rf)
+return A.aF(A.yX("GET","/api-v5/public/latest-release",a,new A.Rg(d),c,b),$async$Rf)
 case 2:return A.ae(null,r)}})
 return A.af($async$Rf,r)},
 ast(a){var s=t.nA.a(J.ay(a,"releases"))
