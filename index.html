@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAN Genius</title>
+    <title>局域网精灵中文官网</title>
+    <meta name="description" content="文件传输助手，剪切板共享">
     <link rel="stylesheet" href="/res/css/spectre.min.css">
-    <link rel="stylesheet" href="/res/css/app.css">
-    <script src="/res/js/app.js"></script>
-    <script src="/res/js/vue.min.js"></script>
+    <link rel="stylesheet" href="/res/css/app.min.css">
+    <script src="/res/js/app.min.js"></script>
 </head>
 
-<body style="background-image: url('/res/image/bg.jpeg');">
+<body>
     <div id="app" class="column" style="color: white;">
         <header class="navbar">
             <section class="navbar-section">
@@ -28,20 +28,6 @@
 
         <a href="/download.html" class="btn btn-lg btn-primary">{{str["DOWNLOAD_"]}}</a>
     </div>
-    <script>
-        app = new Vue({
-            el: '#app',
-            data: {
-                str: {}
-            },
-            created: function () {
-                loadLanguage(function (obj) {
-                    app.str = obj;
-                    document.title = obj["APP_NAME_"]
-                })
-            }
-        })
-    </script>
 </body>
 
 </html>
