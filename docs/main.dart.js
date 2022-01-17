@@ -61315,7 +61315,7 @@ Re(){var s=this
 s.aK(new A.a6P(s))
 A.Rf(new A.Xd("zh",A.a(["android","ios","windows","darwin","linux"],t.s)),new A.a6Q(s),new A.a6R(s),new A.a6S(s))}}
 A.a6U.prototype={
-$2(a,b){var s=null,r=this.a,q=r.f[b],p=A.rF("https://langenius.gitee.io/image/"+q+".png",s,s,s)
+$2(a,b){var s=null,r=this.a,q=r.f[b],p=A.rF("/image/"+q+".png",s,s,s)
 q=A.cO(A.kC(q,"darwin","Mac"),s,s,s,s)
 return A.ahp(p,new A.a6T(r,b),A.cO("v"+r.e[b].a,s,s,s,s),q)},
 $S:378}
@@ -61364,7 +61364,7 @@ m=m.glC(m)
 s=A.c2(b,B.P,n)
 r=t.F
 m=A.R2(A.a([A.aeo(A.cO(s.grP(s),o,o,o,o),new A.Xs(b),o),A.aeo(A.cO(A.c2(b,B.P,n).gA_(),o,o,o,o),new A.Xt(b),o)],r),B.m,new A.kR(m,o),300)
-s=A.rF("https://langenius.gitee.io/image/bg.jpeg",B.BQ,o,o)
+s=A.rF("/image/bg.jpeg",B.BQ,o,o)
 q=A.c2(b,B.P,n)
 q=A.cO(q.glC(q),o,B.Yz,o,o)
 p=A.c2(b,B.P,n)
