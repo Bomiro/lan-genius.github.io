@@ -5,9 +5,9 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "df58773bc5b8cb8861764572192dce7e",
 "privacy_zh.html": "18e0ddf27afea54514910e8b5f103365",
-"index.html": "e2432931d6f653bd325fc26cf3b92a1a",
-"/": "e2432931d6f653bd325fc26cf3b92a1a",
-"main.dart.js": "80a3aa068391786062b71585acc129e6",
+"index.html": "6852ee8136d143f67c199584178d4366",
+"/": "6852ee8136d143f67c199584178d4366",
+"main.dart.js": "598be014cc1aafc7f62973da193a664f",
 "price.html": "1fc80297fc119dead13e3906950d1177",
 "pay.html": "5a6bbb9543a77b55af1f07b4487d5a93",
 "image/android.png": "b7a37fcc12a0687434f1981b113fe1dd",
@@ -33,7 +33,7 @@ const RESOURCES = {
 "api/push/en/android.json": "bbbb00ecafd96a2761a95410351faff2",
 "privacy.txt": "9808fafe73d41b1097ed082d663b2c2b",
 "assets/AssetManifest.json": "99914b932bd37a50b983c5e7c90ae93b",
-"assets/NOTICES": "4229606d7dc392ee3526e1d664573b70",
+"assets/NOTICES": "4b83ab93985e2cd327433f68d07b2e36",
 "assets/FontManifest.json": "d751713988987e9331980363e24189ce",
 "privacy.html": "440341cea2a5a4491c05dd22c949637b"
 };
