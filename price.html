@@ -5,61 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price - LAN Genius</title>
-    <link rel="stylesheet" href="/res/css/spectre.min.css">
-    <link rel="stylesheet" href="/res/css/app.css">
-    <script src="/res/js/app.js"></script>
-    <script src="/res/js/vue.min.js"></script>
+    <title>价格｜局域网精灵</title>
+    <link rel="stylesheet" href="res/css/spectre.min.css">
+    <link rel="stylesheet" href="res/css/app.css">
+    <script src="res/js/app.js"></script>
 </head>
 
 <body>
     <div id="app" class="column">
         <div class="waterfall">
             <b style="color: red;">
-                🎉{{str["SUBSCRIBE_FOR_NO_ADS_"]}}🎉
+                🎉订阅会员免广告🎉
             </b>
-            <span>{{str["REGISTER_AN_ACCOUNT_BEFORE_YOU_PAY_"]}}
-                <a href="/download.html" class="btn btn-primary">{{str["DOWNLOAD_CLIENT_"]}}</a>
+            <span>购买之前请先注册一个账号
+                <a href="download.html" class="btn btn-primary">安装并注册</a>
             </span>
             <div class="row">
-                <div v-for='price in prices' class="card">
+
+                <div class="card">
                     <div class="card-header">
-                        <div style="color: red;" class="card-title h5">{{price.price}}</div>
-                        <div class="card-subtitle text-gray">{{price.title}}</div>
+                        <div style="color: red;" class="card-title h5">¥6 RMB</div>
+                        <div class="card-subtitle text-gray">一个月</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color: red;" class="card-title h5">¥12 RMB</div>
+                        <div class="card-subtitle text-gray">三个月</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color: red;" class="card-title h5">¥28 RMB</div>
+                        <div class="card-subtitle text-gray">一年</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color: red;" class="card-title h5">¥42 RMB</div>
+                        <div class="card-subtitle text-gray">永久会员</div>
                     </div>
                 </div>
             </div>
             <br>
-            <span>{{str["PLZ_REMARK_YOUR_USERNAME_WHEN_PAY_"]}}</span>
-            <a href="/pay.html" class="btn btn-primary">
-                {{str["PAY_NOW_"]}}
+            <span>支付时一定记得备注上您的用户名</span>
+            <a href="pay.html" class="btn btn-primary">
+                立即支付
             </a>
         </div>
     </div>
-    <script>
-        app = new Vue({
-            el: '#app',
-            data: {
-                str: {},
-                prices: [],
-            },
-            created: function () {
-                loadLanguage(function (obj) {
-                    app.str = obj;
-                    document.title = obj['PRICE_'] + ' - ' + obj['APP_NAME_'];
-                })
-                var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        app.prices = JSON.parse(xhr.responseText)
-                    }
-                }
-                xhr.open('GET', 'https://api.lan-genius.com/api-v4/public/prices')
-                xhr.setRequestHeader('Language', navigator.language)
-                xhr.send()
-            }
-        })
-    </script>
+
 </body>
 
 </html>

@@ -5,77 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download - LAN Genius</title>
+    <title>下载客户端｜局域网精灵</title>
 
-    <link rel="stylesheet" href="/res/css/spectre.min.css">
-    <link rel="stylesheet" href="/res/css/app.css">
-    <script src="/res/js/app.js"></script>
-    <script src="/res/js/vue.min.js"></script>
+    <link rel="stylesheet" href="res/css/spectre.min.css">
+    <link rel="stylesheet" href="res/css/app.css">
+    <script src="res/js/app.js"></script>
 </head>
 
 <body>
     <div id="app" class="column">
         <ul class="menu" style="max-width: 700px;width: 100%;">
             <!-- menu header text -->
-            <li class="divider" v-bind:data-content="str['DOWNLOAD_']">
+            <li class="divider" data-content="下载客户端">
             </li>
             <!-- menu item standard -->
             <li class="menu-item">
-                <a :href="urls.android">
+                <a href="https://wwi.lanzout.com/iJq6gyhkm9c">
                     <div class="row">
-                        <img src="/res/image/android.png" alt="android" width="25" height="25" style="margin-right: 15px;">
-                        <span>Android</span>
+                        <img src="res/image/android.svg" alt="android" width="25" height="25" style="margin-right: 15px;">
+                        <span>安卓</span>
                     </div>
                 </a>
             </li>
             <li class="menu-item">
-                <a :href="urls.windows">
+                <a href="https://wwi.lanzoui.com/itnTYwi7kna">
                     <div class="row">
-                        <img src="/res/image/windows.png" alt="windows" width="25" height="25" style="margin-right: 15px;">
+                        <img src="res/image/windows.svg" alt="windows" width="25" height="25" style="margin-right: 15px;">
                         <span>Windows</span>
                     </div>
                 </a>
             </li>
             <li class="menu-item">
-                <a :href="urls.mac">
+                <a href="https://wwi.lanzoui.com/ieANFwhmc7a">
                     <div class="row">
-                        <img src="/res/image/darwin.png" alt="mac" width="25" height="25" style="margin-right: 15px;">
+                        <img src="res/image/apple.svg" alt="mac" width="25" height="25" style="margin-right: 15px;">
                         <span>Mac</span>
                     </div>
                 </a>
             </li>
             <li class="menu-item">
-                <a :href="urls.linux">
+                <a href="https://wwi.lanzoui.com/if63Kwhkisf">
                     <div class="row">
-                        <img src="/res/image/linux.png" alt="linux" width="25" height="25" style="margin-right: 15px;">
+                        <img src="res/image/linux.svg" alt="linux" width="25" height="25" style="margin-right: 15px;">
                         <span>Linux</span>
                     </div>
                 </a>
             </li>
-            <a style="float: right;" href="https://github.com/lan-genius/lan-genius.github.io/releases">{{str["PREVIOUS_VERSION_DOWNLOAD_"]}}</a>
+
+            <li class="menu-item">
+                <a href="https://play.google.com/store/apps/details?id=com.xchat.stevenzack.langenius">
+                    <div class="row">
+                        <img src="res/image/playstore.svg" alt="linux" width="100" style="margin-right: 20px;">
+                        <span>谷歌Play商店下载</span>
+                    </div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="https://apps.apple.com/cn/app/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%B2%BE%E7%81%B5pro/id1511699208?l=zh">
+                    <div class="row">
+                        <img src="res/image/appstore.svg" alt="linux" width="120" class="mt-2">
+                        <span>苹果商店下载</span>
+                    </div>
+                </a>
+            </li>
+            <a style="float: right;" href="https://github.com/lan-genius/lan-genius.github.io/releases">历史版本下载</a>
 
         </ul>
     </div>
-    <script>
-        app = new Vue({
-            el: '#app',
-            data: {
-                str: {},
-                urls: {
-                    android: 'https://wwi.lanzoui.com/ioZVdse16dc',
-                    windows: 'https://wwe.lanzoux.com/i4ZDUfwxs3g',
-                    linux: 'https://wwe.lanzoux.com/iom0Bfwxt9i',
-                    mac: 'https://wwe.lanzoux.com/iKnR4fwxs0d',
-                }
-            },
-            created: function () {
-                loadLanguage(function (obj) {
-                    app.str = obj;
-                    document.title = obj['DOWNLOAD_'] + ' - ' + obj['APP_NAME_']
-                })
-            }
-        })
-    </script>
 </body>
 
 </html>

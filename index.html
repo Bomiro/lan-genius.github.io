@@ -7,26 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>局域网精灵中文官网</title>
     <meta name="description" content="文件传输助手，剪切板共享">
-    <link rel="stylesheet" href="/res/css/spectre.min.css">
-    <link rel="stylesheet" href="/res/css/app.min.css">
-    <script src="/res/js/app.min.js"></script>
+    <link rel="stylesheet" href="res/css/spectre.min.css">
+    <link rel="stylesheet" href="res/css/spectre-icons.min.css">
+    <link rel="stylesheet" href="res/css/app.css">
+    <script src="res/js/app.js"></script>
 </head>
 
 <body>
-    <div id="app" class="column" style="color: white;">
-        <header class="navbar">
-            <section class="navbar-section">
-                <a href="/" class="navbar-brand mr-2">{{str["HOME_"]}}</a>
-                <a href="/download.html" class="btn btn-link">{{str["DOWNLOAD_"]}}</a>
-                <a href="/price.html" class="btn btn-link">{{str["PRICE_"]}}</a>
-            </section>
-        </header><br><br><br>
-
-        <img src="/res/image/ic_launcher.png" alt="logo"><br>
-        <h1>{{str["APP_NAME_"]}}</h1>
-        <span>{{str["DESC_"]}}</span><br><br>
-
-        <a href="/download.html" class="btn btn-lg btn-primary">{{str["DOWNLOAD_"]}}</a>
+    <div id="app" class="column">
+        <div class="waterfall-stretch">
+            <div class="row">
+                <img src="res/image/share.svg" alt="logo" width="50" height="50" class="m-8">
+                <h1>局域网精灵</h1>
+            </div>
+            <span class="m-2">局域网传输神器！快速共享文件和剪切板</span>
+            <ul class="tab tab-block">
+                <li class="tab-item active">
+                    <a href="#">首页</a>
+                </li>
+                <li class="tab-item">
+                    <a href="download.html">下载</a>
+                </li>
+                <li class="tab-item">
+                    <a href="price.html">价格</a>
+                </li>
+                <li class="tab-item">
+                    <a href="contact.html">联系我们</a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="waterfall">
+            <img src="res/image/demo.svg" alt="demo" height="249">
+                <h3>
+                    通过Wi-Fi实现高速传输文件
+                </h3>
+                <br>
+            <p>不再依赖数据线，不耗流量！</p>
+            <br>
+            <a class="btn btn-primary" href="download.html">
+                <i class="icon icon-download"></i>
+                立即下载</a>
+        </div>
     </div>
 </body>
 
