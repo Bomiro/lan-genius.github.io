@@ -14,6 +14,7 @@ release:
 	
 	# html
 	cp index.min.html public/index.html
+	cp 404.min.html public/404.html
 	cp favicon.ico public/favicon.ico
 	cp download.min.html public/download.html
 	cp contact.min.html public/contact.html
