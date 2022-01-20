@@ -1,7 +1,7 @@
 run:
 
 release:
-	rm -rf public/*
+	# rm -rf public/*
 	mkdir -p public/res/css
 	cp res/css/app.min.css public/res/css/app.css
 	cp res/css/spectre.min.css public/res/css/
