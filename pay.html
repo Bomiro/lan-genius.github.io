@@ -9,8 +9,21 @@
     <link rel="stylesheet" href="res/css/spectre.min.css">
     <link rel="stylesheet" href="res/css/app.css">
     <script src="res/js/app.js"></script>
-    <script data-ad-client="ca-pub-4521213065662832" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+    
+    <script>
+        function doCopyUsername(me){
+            var beforeText=me.innerText;
+            var elem=document.getElementById('username');
+            elem.removeAttribute('disabled');
+            elem.select();
+            document.execCommand('Copy');
+            me.innerText='OK'
+            setTimeout(() => {
+                elem.setAttribute('disabled','disabled')
+                me.innerText=beforeText;
+            }, 1000);
+        }
+    </script>
 </head>
 
 <body>
@@ -20,6 +33,7 @@
                 立即支付
             </h1>
             <b style="color: red;">支付时一定记得备注上您的用户名！</b>
+            <div id="username-box" style="display: none;"><input type="text" id="username" disabled > <button id="copy-btn" onclick="doCopyUsername(this)">复制</button> </div>
             <a href="https://qr.alipay.com/tsx02907mtbanqhpid1vq87"><img src="res/image/alipay.jpg" alt="alipay"></a>
             <span>微信支付无法退款，有问题请加售后Q群:691017244</span>
             <a href="wxp://f2f0p_qNyNEd6TdLm6DBIb9PWiHFsP7ZkmN8"><img src="res/image/wechat.jpg" alt="wechat"></a>
@@ -32,6 +46,13 @@
         </div>
     </div>
 
+    <script>
+        var obj=parseQuery(location.href)
+        if(obj['username']){
+            document.getElementById('username').value=obj['username']
+            document.getElementById('username-box').style.display='block'
+        }
+    </script>
 
     <script type="module">
         // Import the functions you need from the SDKs you need

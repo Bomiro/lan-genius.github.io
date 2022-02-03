@@ -40,3 +40,44 @@ function parseQuery(url) {
     }
     return m;
 }
+
+var _server='https://6c0dfa5380a44263b06be93336628683.apig.cn-south-1.huaweicloudapis.com/https2http';
+function apiRequest(method,uri,req,onOk,onFail,eventually){
+    var xhr=new XMLHttpRequest()
+    xhr.onreadystatechange=function(e){
+        if(this.readyState!=4){
+            return;
+        }
+        if(this.status==200){
+            var body={};
+            try{
+                body=JSON.parse(this.responseText);
+            }catch(e){}
+            onOk(body)
+        }else{
+            onFail(this.responseText)
+        }
+        if(eventually){
+            eventually()
+        }
+    }
+    xhr.open(method,_server);
+    xhr.setRequestHeader('uri',uri);
+    xhr.setRequestHeader('Content-Type','application/json; charset=utf-8');
+    if(req){
+        req=JSON.stringify(req);
+    }
+    xhr.send(req);
+}
+
+function apiPublicPrices(onOk,onFail,eventually){
+    apiRequest('GET','/api-v5/public/prices',null,{
+        gl:navigator.language
+    },onOk,onFail,eventually)
+}
+
+function apiLatestReleases(onOk,onFail,eventually){
+    apiRequest('GET','/api-v5/public/latest-release',{
+        gl:navigator.language
+    },onOk,onFail,eventually)
+}
