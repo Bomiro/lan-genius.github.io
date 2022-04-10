@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转</title>
+    <script>
+        function getUsername() {
+            var i = location.href.indexOf('username=');
+            if (i == -1) {
+                return '';
+            }
+            return location.href.substring(i + 'username='.length);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="javascript:location.href='https://da955984930d4dfd9266630c338696bf.apig.ap-southeast-1.huaweicloudapis.com/price_html?username='+getUsername();">正在跳转</a>
+    <script>
+        location.href = 'https://da955984930d4dfd9266630c338696bf.apig.ap-southeast-1.huaweicloudapis.com/price_html?username=' + getUsername();
+    </script>
+</body>
+
+</html>
