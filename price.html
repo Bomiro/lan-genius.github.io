@@ -4,24 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跳转</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>价格｜局域网精灵</title>
+    <link rel="stylesheet" href="res/css/spectre.min.css">
+    <link rel="stylesheet" href="res/css/app.css">
     <script>
         function getUsername() {
             var i = location.href.indexOf('username=');
             if (i == -1) {
                 return '';
             }
-            return location.href.substring(i + 'username='.length);
+            return decodeURIComponent(location.href.substring(i + 'username='.length));
         }
     </script>
 </head>
 
 <body>
-    <a href="javascript:location.href='https://da955984930d4dfd9266630c338696bf.apig.ap-southeast-1.huaweicloudapis.com/price_html?username='+getUsername();">正在跳转</a>
-    <script>
-        location.href = 'https://da955984930d4dfd9266630c338696bf.apig.ap-southeast-1.huaweicloudapis.com/price_html?username=' + getUsername();
-    </script>
+    <div id="app" class="column">
+        <div class="waterfall"><b style="color:red">🎉订阅会员免广告🎉 </b><span>购买之前请先注册一个账号 <a href="download_html"
+                    class="btn btn-primary">安装并注册</a></span>
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color:red" class="card-title h5">¥6 RMB</div>
+                        <div class="card-subtitle text-gray">一个月</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color:red" class="card-title h5">¥12 RMB</div>
+                        <div class="card-subtitle text-gray">三个月</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color:red" class="card-title h5">¥28 RMB</div>
+                        <div class="card-subtitle text-gray">一年</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div style="color:red" class="card-title h5">¥42 RMB</div>
+                        <div class="card-subtitle text-gray">永久会员</div>
+                    </div>
+                </div>
+            </div><br><span>支付时一定记得备注上您的用户名</span> <a href="javascript:location.href='pay.html?username='+getUsername()"
+                class="btn btn-primary">立即支付</a>
+        </div>
+    </div>
 </body>
 
 </html>
